@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="Lib/jQuery.js"></script>
+    <title>search</title>
+</head>
+<body>
+    <div class="head">
+        <div class="search-bar">
+            <input type="search" id="input" placeholder="Input your search here...">
+        </div>
+        <div class="values">
+            <ul>
+                <li>John</li>
+                <li>Mary</li>
+                <li>Free fire</li>
+                <li>Peter</li>
+                <li>Stones</li>
+                <li>Mark</li>
+                <li>Jones</li>
+                <li>Augustus</li>
+                <li>Chloe</li>
+                <li>Lucy</li>
+                <li>Samad</li>
+                <li>Leeyah</li>
+                <li>Joseph</li>
+            </ul>
+            <!-- <h1>File not Found</h1> -->
+        </div>
+        <!-- <table>
+            <thead>
+                <tr>
+                <td>Head</td>
+                <td>Middle</td>
+                <td>Tail</td>
+                </tr>
+            </thead>
+            <tbody id="mytable">
+                <tr>
+                    <td>John</td>
+                    <td>009</td>
+                    <td>johnoof@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>009</td>
+                    <td>marypaul@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>009</td>
+                    <td>peterjones@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Stones</td>
+                    <td>009</td>
+                    <td>augustusstone@gmail.com</td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+<script>
+    $(document).ready(function(){
+        $("#input").on("keyup", function(){
+            var value = $(this).val().toLowerCase();
+            if ($(value) == "00"){
+                $(".values").html("<h1>File not Found</h1>")
+            }else{
+                
+                $(".values, li").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            }
+        })
+    })
+
+
+
+
+
+    // $(document).ready(function(){
+    //     $("#input").on("keyup", function(){
+    //         var value = $(this).val().toLowerCase();
+    //         $(".values, li").filter(function(){
+    //             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    //         })
+    //     })
+    // })
+        
+</script>
+</body>
+</html>
